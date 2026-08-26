@@ -1,0 +1,1473 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Πέτρος Σωτηρίου | Portion Nutrition Lab | Διαιτολόγος - Διατροφολόγος Λαμία
+  </title>
+
+  <meta
+    name="description"
+    content="Portion Nutrition Lab στη Λαμία. Ο διαιτολόγος-διατροφολόγος Πέτρος Σωτηρίου παρέχει επιστημονικά τεκμηριωμένη διατροφική υποστήριξη για καθημερινή υγεία, αθλητική διατροφή και διατροφή στη νόσο."
+  >
+
+  <meta
+    name="robots"
+    content="index, follow"
+  >
+
+
+  <!-- Open Graph -->
+
+  <meta
+    property="og:title"
+    content="Portion Nutrition Lab | Πέτρος Σωτηρίου"
+  >
+
+  <meta
+    property="og:description"
+    content="Επιστημονικά τεκμηριωμένη διατροφική υποστήριξη στη Λαμία."
+  >
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <meta
+    property="og:locale"
+    content="el_GR"
+  >
+
+
+  <!-- Fonts -->
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  >
+
+
+  <!-- Local SEO structured data -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalBusiness",
+    "name": "Portion Nutrition Lab",
+    "telephone": "+302231308028",
+    "medicalSpecialty": "https://schema.org/DietNutrition",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Πατρόκλου 35",
+      "addressLocality": "Λαμία",
+      "addressRegion": "Φθιώτιδα",
+      "addressCountry": "GR"
+    },
+    "founder": {
+      "@type": "Person",
+      "name": "Πέτρος Σωτηρίου",
+      "jobTitle": "Διαιτολόγος-Διατροφολόγος"
+    },
+    "areaServed": "Λαμία"
+  }
+  </script>
+
+
+  <style>
+
+    :root {
+      --bg: #F2F4EE;
+      --surface: #FFFFFF;
+
+      --text: #26312B;
+      --text-muted: #5C6A63;
+
+      --primary: #3B5D50;
+      --primary-dark: #294338;
+
+      --accent: #C08A3E;
+
+      --border: #E1E5DC;
+
+      --radius: 14px;
+      --max-width: 1080px;
+    }
+
+
+    * {
+      box-sizing: border-box;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+      margin: 0;
+
+      background: var(--bg);
+      color: var(--text);
+
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+
+      -webkit-font-smoothing: antialiased;
+    }
+
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+
+      font-family: 'Alegreya', serif;
+      font-weight: 700;
+
+      color: var(--primary-dark);
+    }
+
+
+    a {
+      color: inherit;
+    }
+
+
+    .wrap {
+      width: 100%;
+      max-width: var(--max-width);
+
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+
+    /* =========================
+       TOP CONTACT BAR
+       ========================= */
+
+    .top-contact {
+      background: var(--primary-dark);
+      color: #FFFFFF;
+
+      font-size: 0.92rem;
+    }
+
+
+    .top-contact .wrap {
+      min-height: 46px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      gap: 40px;
+    }
+
+
+    .top-contact a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+
+      color: #FFFFFF;
+
+      font-weight: 500;
+      text-decoration: none;
+    }
+
+
+    .top-contact a:hover {
+      text-decoration: underline;
+    }
+
+
+    /* =========================
+       HEADER
+       ========================= */
+
+    header {
+      position: relative;
+
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+
+      z-index: 50;
+    }
+
+
+    .header-inner {
+      position: relative;
+
+      min-height: 130px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+
+    /* Logo */
+
+    .logo {
+      display: block;
+      text-decoration: none;
+    }
+
+
+    .logo img {
+      display: block;
+
+      width: auto;
+
+      max-width: min(320px, 65vw);
+      max-height: 105px;
+
+      object-fit: contain;
+    }
+
+
+    /* =========================
+       HAMBURGER
+       ========================= */
+
+    .menu-toggle {
+      position: absolute;
+
+      right: 24px;
+      top: 50%;
+
+      transform: translateY(-50%);
+
+      width: 46px;
+      height: 46px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      gap: 6px;
+
+      background: var(--surface);
+
+      border: 1px solid var(--border);
+      border-radius: 10px;
+
+      cursor: pointer;
+    }
+
+
+    .menu-toggle span {
+      display: block;
+
+      width: 22px;
+      height: 2px;
+
+      background: var(--primary-dark);
+
+      border-radius: 2px;
+
+      transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+    }
+
+
+    .menu-toggle.active span:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+
+
+    .menu-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+
+
+    .menu-toggle.active span:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+
+
+    /* =========================
+       DROPDOWN MENU
+       ========================= */
+
+    .main-nav {
+      position: absolute;
+
+      top: calc(100% - 8px);
+      right: 24px;
+
+      min-width: 220px;
+
+      display: none;
+      flex-direction: column;
+
+      padding: 10px;
+
+      background: var(--surface);
+
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+
+      box-shadow:
+        0 14px 35px rgba(41, 67, 56, 0.14);
+
+      z-index: 100;
+    }
+
+
+    .main-nav.open {
+      display: flex;
+    }
+
+
+    .main-nav a {
+      padding: 12px 14px;
+
+      color: var(--text);
+
+      font-size: 0.95rem;
+      font-weight: 500;
+
+      text-decoration: none;
+
+      border-radius: 8px;
+    }
+
+
+    .main-nav a:hover,
+    .main-nav a:focus-visible {
+      background: var(--bg);
+      color: var(--primary-dark);
+    }
+
+
+    /* =========================
+       HERO
+       ========================= */
+
+    .hero {
+      position: relative;
+
+      padding: 64px 0 90px;
+
+      overflow: hidden;
+    }
+
+
+    .hero-blob {
+      position: absolute;
+
+      top: -120px;
+      right: -140px;
+
+      width: 480px;
+      height: 480px;
+
+      opacity: 0.35;
+
+      z-index: 0;
+
+      pointer-events: none;
+    }
+
+
+    .hero-inner {
+      position: relative;
+
+      max-width: 680px;
+
+      z-index: 1;
+    }
+
+
+    .eyebrow {
+      display: block;
+
+      margin-bottom: 14px;
+
+      color: var(--accent);
+
+      font-size: 0.85rem;
+      font-weight: 600;
+
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+
+    .hero h1 {
+      margin-bottom: 18px;
+
+      font-size: clamp(2.1rem, 4.5vw, 3rem);
+      line-height: 1.15;
+    }
+
+
+    .hero p {
+      max-width: 58ch;
+
+      color: var(--text-muted);
+
+      font-size: 1.08rem;
+    }
+
+
+    /* =========================
+       SPECIALTIES
+       ========================= */
+
+    .specialties {
+      padding: 20px 0 90px;
+    }
+
+
+    .specialties h2 {
+      margin-bottom: 8px;
+
+      font-size: clamp(1.7rem, 3vw, 2.2rem);
+    }
+
+
+    .section-intro {
+      max-width: 60ch;
+
+      margin-top: 0;
+      margin-bottom: 40px;
+
+      color: var(--text-muted);
+    }
+
+
+    .card-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(auto-fit, minmax(250px, 1fr));
+
+      gap: 24px;
+    }
+
+
+    .card {
+      padding: 30px 26px;
+
+      background: var(--surface);
+
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+
+    .card:hover {
+      transform: translateY(-3px);
+
+      box-shadow:
+        0 12px 28px -18px
+        rgba(41, 67, 56, 0.35);
+    }
+
+
+    .card-icon {
+      width: 42px;
+      height: 42px;
+
+      margin-bottom: 18px;
+
+      color: var(--primary);
+    }
+
+
+    .card-icon svg {
+      width: 100%;
+      height: 100%;
+    }
+
+
+    .card h3 {
+      margin-bottom: 10px;
+
+      font-size: 1.2rem;
+    }
+
+
+    .card p {
+      margin: 0;
+
+      color: var(--text-muted);
+
+      font-size: 0.97rem;
+    }
+
+
+    /* =========================
+       ABOUT
+       ========================= */
+
+    .about {
+      padding: 85px 0;
+
+      background: var(--surface);
+
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+
+    .about-grid {
+      display: grid;
+
+      grid-template-columns: 320px 1fr;
+
+      gap: 60px;
+
+      align-items: start;
+    }
+
+
+    .about-photo img {
+      display: block;
+
+      width: 100%;
+      height: auto;
+
+      border-radius: var(--radius);
+
+      box-shadow:
+        0 18px 40px -25px rgba(41, 67, 56, 0.4);
+    }
+
+
+    .about-text h2 {
+      margin-bottom: 6px;
+
+      font-size: clamp(1.8rem, 3vw, 2.4rem);
+    }
+
+
+    .about-name {
+      margin-top: 0;
+      margin-bottom: 28px;
+
+      color: var(--accent);
+
+      font-weight: 600;
+    }
+
+
+    .about-text p {
+      margin-top: 0;
+      margin-bottom: 20px;
+
+      color: var(--text-muted);
+    }
+
+
+    .about-text strong {
+      color: var(--text);
+    }
+
+
+    /* =========================
+       CONTACT CTA
+       ========================= */
+
+    .contact-section {
+      padding: 75px 0;
+
+      text-align: center;
+    }
+
+
+    .contact-section h2 {
+      margin-bottom: 10px;
+
+      font-size: clamp(1.7rem, 3vw, 2.2rem);
+    }
+
+
+    .contact-section p {
+      margin-top: 0;
+      margin-bottom: 26px;
+
+      color: var(--text-muted);
+    }
+
+
+    .contact-buttons {
+      display: flex;
+      flex-wrap: wrap;
+
+      justify-content: center;
+
+      gap: 14px;
+    }
+
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      min-height: 48px;
+
+      padding: 10px 20px;
+
+      border-radius: 10px;
+
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+
+    .button-primary {
+      background: var(--primary);
+      color: #FFFFFF;
+    }
+
+
+    .button-primary:hover {
+      background: var(--primary-dark);
+    }
+
+
+    .button-secondary {
+      background: var(--surface);
+      color: var(--primary-dark);
+
+      border: 1px solid var(--border);
+    }
+
+
+    .button-secondary:hover {
+      border-color: var(--primary);
+    }
+
+
+    /* =========================
+       FOOTER
+       ========================= */
+
+    footer {
+      padding: 48px 0 32px;
+
+      background: var(--primary-dark);
+
+      color: #E9EEE9;
+    }
+
+
+    footer .wrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      gap: 32px;
+    }
+
+
+    footer h3 {
+      margin-bottom: 12px;
+
+      color: #FFFFFF;
+
+      font-size: 1.1rem;
+    }
+
+
+    footer p,
+    footer a {
+      color: #C7D3C9;
+
+      font-size: 0.95rem;
+
+      text-decoration: none;
+    }
+
+
+    footer a:hover {
+      color: #FFFFFF;
+    }
+
+
+    .footer-bottom {
+      margin-top: 40px;
+      padding-top: 20px;
+
+      border-top:
+        1px solid rgba(255, 255, 255, 0.12);
+
+      color: #93A398;
+
+      font-size: 0.85rem;
+    }
+
+
+    :focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+
+    /* =========================
+       MOBILE
+       ========================= */
+
+    @media (max-width: 760px) {
+
+      .wrap {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+
+
+      .top-contact .wrap {
+        min-height: auto;
+
+        padding-top: 9px;
+        padding-bottom: 9px;
+
+        flex-direction: column;
+
+        gap: 3px;
+      }
+
+
+      .top-contact a {
+        font-size: 0.86rem;
+      }
+
+
+      .header-inner {
+        min-height: 110px;
+
+        justify-content: flex-start;
+      }
+
+
+      .logo img {
+        max-width: 210px;
+        max-height: 85px;
+      }
+
+
+      .menu-toggle {
+        right: 20px;
+      }
+
+
+      .main-nav {
+        top: calc(100% - 5px);
+
+        left: 20px;
+        right: 20px;
+
+        min-width: 0;
+      }
+
+
+      .hero {
+        padding: 48px 0 65px;
+      }
+
+
+      .hero-blob {
+        top: -80px;
+        right: -100px;
+
+        width: 320px;
+        height: 320px;
+      }
+
+
+      .specialties {
+        padding-bottom: 65px;
+      }
+
+
+      .about {
+        padding: 65px 0;
+      }
+
+
+      .about-grid {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+      }
+
+
+      .about-photo {
+        max-width: 360px;
+      }
+
+
+      .contact-section {
+        padding: 60px 0;
+      }
+
+
+      .contact-buttons {
+        flex-direction: column;
+      }
+
+
+      .button {
+        width: 100%;
+      }
+
+    }
+
+  </style>
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       TOP CONTACT BAR
+       ========================= -->
+
+  <div class="top-contact">
+
+    <div class="wrap">
+
+      <a
+        href="https://www.google.com/maps/search/?api=1&query=Portion+Nutrition+Lab%2C+Patroklou+35%2C+Lamia"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span aria-hidden="true">⌖</span>
+
+        Πατρόκλου 35, Λαμία
+      </a>
+
+
+      <a href="tel:+302231308028">
+
+        <span aria-hidden="true">☎</span>
+
+        22313 08028
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <!-- =========================
+       HEADER
+       ========================= -->
+
+  <header>
+
+    <div class="wrap header-inner">
+
+
+      <a
+        href="#top"
+        class="logo"
+        aria-label="Portion Nutrition Lab - Αρχική"
+      >
+
+        <img
+          src="image/logo.jpg"
+          alt="Portion Nutrition Lab"
+        >
+
+      </a>
+
+
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-label="Άνοιγμα μενού"
+        aria-expanded="false"
+        aria-controls="main-menu"
+      >
+
+        <span></span>
+        <span></span>
+        <span></span>
+
+      </button>
+
+
+      <nav
+        class="main-nav"
+        id="main-menu"
+        aria-label="Κύρια πλοήγηση"
+      >
+
+        <a href="#tomeis">
+          Τομείς Εξειδίκευσης
+        </a>
+
+        <a href="#about">
+          Ποιος είμαι
+        </a>
+
+        <a href="#epikoinonia">
+          Επικοινωνία
+        </a>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- =========================
+       MAIN
+       ========================= -->
+
+  <main id="top">
+
+
+    <!-- HERO -->
+
+    <section class="hero">
+
+      <svg
+        class="hero-blob"
+        viewBox="0 0 400 400"
+        xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true"
+      >
+
+        <path
+          fill="#3B5D50"
+          d="M320,90 C360,140 370,220 330,280 C290,340 200,360 140,330 C80,300 40,230 60,160 C80,90 150,40 220,50 C260,55 290,55 320,90 Z"
+        ></path>
+
+      </svg>
+
+
+      <div class="wrap hero-inner">
+
+        <span class="eyebrow">
+          Διαιτολόγος · Διατροφολόγος στη Λαμία
+        </span>
+
+        <h1>
+          Επιστημονική διατροφική καθοδήγηση,
+          προσαρμοσμένη σε εσάς.
+        </h1>
+
+        <p>
+          Το Portion Nutrition Lab είναι ο προορισμός σας
+          για αντικειμενικές και επιστημονικά τεκμηριωμένες
+          συμβουλές σε ένα ευρύ φάσμα θεμάτων διατροφής,
+          όπως η διατροφή για την καθημερινή υγεία,
+          η αθλητική διατροφή και η διατροφή στη νόσο.
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         SPECIALTIES
+         ========================= -->
+
+    <section
+      class="specialties"
+      id="tomeis"
+    >
+
+      <div class="wrap">
+
+        <h2>
+          Τομείς Εξειδίκευσης
+        </h2>
+
+        <p class="section-intro">
+          Ενδεικτικοί τομείς διατροφικής υποστήριξης
+          που παρέχονται στο Portion Nutrition Lab.
+        </p>
+
+
+        <div class="card-grid">
+
+
+          <article class="card">
+
+            <div
+              class="card-icon"
+              aria-hidden="true"
+            >
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+
+                <circle cx="12" cy="12" r="4"></circle>
+
+                <path
+                  d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"
+                ></path>
+
+              </svg>
+
+            </div>
+
+            <h3>
+              Διατροφή για Καθημερινή Υγεία
+            </h3>
+
+            <p>
+              Ισορροπημένες διατροφικές συνήθειες,
+              διαχείριση βάρους και ενέργειας
+              για την καθημερινότητά σας.
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <div
+              class="card-icon"
+              aria-hidden="true"
+            >
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+
+                <path
+                  d="M6.5 6.5l11 11M4 9l3-3M20 15l-3 3M2 7l3 3M22 17l-3-3M9 4l-3 3M15 20l3-3"
+                ></path>
+
+              </svg>
+
+            </div>
+
+            <h3>
+              Αθλητική Διατροφή
+            </h3>
+
+            <p>
+              Διατροφική υποστήριξη για απόδοση,
+              αποκατάσταση και σωματική σύσταση,
+              σε κάθε επίπεδο άθλησης.
+            </p>
+
+          </article>
+
+
+          <article class="card">
+
+            <div
+              class="card-icon"
+              aria-hidden="true"
+            >
+
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+
+                <path
+                  d="M12 21s-7.5-4.6-10-9.2C0.3 8.4 2 4.5 6 4c2.2-0.3 4 1 6 3 2-2 3.8-3.3 6-3 4 0.5 5.7 4.4 4 7.8C19.5 16.4 12 21 12 21z"
+                ></path>
+
+              </svg>
+
+            </div>
+
+            <h3>
+              Διατροφή στη Νόσο
+            </h3>
+
+            <p>
+              Εξατομικευμένος διατροφικός σχεδιασμός
+              για κλινικές και χρόνιες καταστάσεις,
+              με βάση τις ανάγκες κάθε ατόμου.
+            </p>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+         ========================= -->
+
+    <section
+      class="about"
+      id="about"
+    >
+
+      <div class="wrap about-grid">
+
+
+        <div class="about-photo">
+
+          <img
+            src="image/petros.jpg"
+            alt="Πέτρος Σωτηρίου, Διαιτολόγος-Διατροφολόγος"
+            loading="lazy"
+          >
+
+        </div>
+
+
+        <div class="about-text">
+
+          <h2>
+            Ποιος είμαι
+          </h2>
+
+          <p class="about-name">
+            Πέτρος Σωτηρίου · Διαιτολόγος-Διατροφολόγος
+          </p>
+
+
+          <p>
+            Ονομάζομαι <strong>Πέτρος Σωτηρίου</strong>
+            και είμαι εγγεγραμμένος
+            <strong>Διαιτολόγος-Διατροφολόγος</strong>,
+            απόφοιτος του Α.Τ.Ε.Ι. Λάρισας το 2015.
+            Εργάζομαι ως ελεύθερος επαγγελματίας.
+          </p>
+
+
+          <p>
+            Η σχέση μου με τον αθλητισμό ξεκίνησε από την ηλικία
+            των 9 ετών, όταν άρχισα να ασχολούμαι συστηματικά
+            με το ποδόσφαιρο. Κάπου εκεί γεννήθηκε και το
+            ενδιαφέρον μου για τη διατροφή και ειδικότερα
+            για τη βελτιστοποίηση της απόδοσης και της
+            αποκατάστασης μέσω διατροφικών πρακτικών.
+          </p>
+
+
+          <p>
+            Ως έφηβος, καθώς αυξάνονταν τόσο οι σχολικές
+            υποχρεώσεις όσο και οι απαιτήσεις του ποδοσφαίρου,
+            αναζητούσα πληροφορίες για τη διατροφή σε περιοδικά
+            και συζητούσα με τους προπονητές μου για τροφές
+            που θα μπορούσαν να υποστηρίξουν καλύτερα
+            την ενέργεια και την αθλητική απόδοση.
+          </p>
+
+
+          <p>
+            Έχοντας ασχοληθεί για αρκετά χρόνια με το ποδόσφαιρο,
+            έως και σε ημιεπαγγελματικό επίπεδο,
+            συνεχίζω να αθλούμαι συστηματικά με ποδηλασία,
+            τρέξιμο, κολύμβηση και προπόνηση με αντιστάσεις.
+            Το ενδιαφέρον μου για τον αθλητισμό και την
+            <strong>αθλητική διατροφή</strong>
+            παραμένει αναπόσπαστο κομμάτι της επαγγελματικής
+            και προσωπικής μου πορείας.
+          </p>
+
+
+          <p>
+            Παράλληλα, με συναρπάζει η επιστήμη της διατροφής
+            και πέρα από τον αθλητισμό. Κατά τη διάρκεια
+            της <strong>εξάμηνης πρακτικής μου άσκησης</strong>
+            σε κεντρικό νοσοκομείο της Αθήνας,
+            απέκτησα σημαντικές γνώσεις και εμπειρίες γύρω από
+            τη <strong>διατροφή σε κλινικές καταστάσεις</strong>.
+          </p>
+
+
+          <p>
+            Στην επαγγελματική μου πορεία έχω ασχοληθεί
+            με περιστατικά που αφορούν, μεταξύ άλλων,
+            τον σακχαρώδη διαβήτη, τη νόσο Πάρκινσον,
+            τη ρευματοειδή αρθρίτιδα και το μεταβολικό σύνδρομο.
+          </p>
+
+
+          <p>
+            Αγαπώ επίσης τη μαγειρική και τον πειραματισμό
+            στην κουζίνα. Κατά τη διάρκεια της στρατιωτικής
+            μου θητείας <strong>υπήρξα μάγειρας</strong>,
+            σε κουζίνα που εξυπηρετούσε κατά μέσο όρο
+            160 άτομα καθημερινά.
+          </p>
+
+
+          <p>
+            Μαγειρεύω συχνά για φίλους και σε μικρές εθελοντικές
+            εκδηλώσεις, ενώ έχω υπάρξει μέλος της οργανωτικής
+            επιτροπής του TEDx Lamia. Διατηρώ επίσης προσωπικό
+            κήπο με εποχικά φρούτα και λαχανικά.
+            Έτσι, η σχέση μου με το φαγητό και τη διατροφή
+            συνεχίζει να εξελίσσεται τόσο επιστημονικά
+            όσο και μέσα από την καθημερινή εμπειρία.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACT
+         ========================= -->
+
+    <section
+      class="contact-section"
+      id="epikoinonia"
+    >
+
+      <div class="wrap">
+
+        <h2>
+          Επικοινωνία
+        </h2>
+
+        <p>
+          Portion Nutrition Lab · Πατρόκλου 35, Λαμία
+        </p>
+
+
+        <div class="contact-buttons">
+
+          <a
+            class="button button-primary"
+            href="tel:+302231308028"
+          >
+            22313 08028
+          </a>
+
+
+          <a
+            class="button button-secondary"
+            href="https://www.google.com/maps/search/?api=1&query=Portion+Nutrition+Lab%2C+Patroklou+35%2C+Lamia"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Προβολή στον χάρτη
+          </a>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =========================
+       FOOTER
+       ========================= -->
+
+  <footer>
+
+    <div class="wrap">
+
+
+      <div>
+
+        <h3>
+          Portion Nutrition Lab
+        </h3>
+
+        <p>
+          Πέτρος Σωτηρίου<br>
+          Διαιτολόγος-Διατροφολόγος
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h3>
+          Διεύθυνση
+        </h3>
+
+        <p>
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Portion+Nutrition+Lab%2C+Patroklou+35%2C+Lamia"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Πατρόκλου 35<br>
+            Λαμία
+          </a>
+        </p>
+
+      </div>
+
+
+      <div>
+
+        <h3>
+          Επικοινωνία
+        </h3>
+
+        <p>
+          <a href="tel:+302231308028">
+            22313 08028
+          </a>
+        </p>
+
+      </div>
+
+    </div>
+
+
+    <div class="wrap footer-bottom">
+
+      &copy; 2026 Portion Nutrition Lab · Λαμία
+
+    </div>
+
+  </footer>
+
+
+  <!-- =========================
+       MENU JAVASCRIPT
+       ========================= -->
+
+  <script>
+
+    const menuButton =
+      document.querySelector('.menu-toggle');
+
+    const menu =
+      document.querySelector('.main-nav');
+
+
+    function closeMenu() {
+
+      menu.classList.remove('open');
+
+      menuButton.classList.remove('active');
+
+      menuButton.setAttribute(
+        'aria-expanded',
+        'false'
+      );
+
+    }
+
+
+    menuButton.addEventListener(
+      'click',
+      () => {
+
+        const isOpen =
+          menu.classList.toggle('open');
+
+        menuButton.classList.toggle(
+          'active',
+          isOpen
+        );
+
+        menuButton.setAttribute(
+          'aria-expanded',
+          String(isOpen)
+        );
+
+      }
+    );
+
+
+    menu
+      .querySelectorAll('a')
+      .forEach(link => {
+
+        link.addEventListener(
+          'click',
+          closeMenu
+        );
+
+      });
+
+
+    document.addEventListener(
+      'click',
+      event => {
+
+        if (
+          !menu.contains(event.target) &&
+          !menuButton.contains(event.target)
+        ) {
+
+          closeMenu();
+
+        }
+
+      }
+    );
+
+
+    document.addEventListener(
+      'keydown',
+      event => {
+
+        if (event.key === 'Escape') {
+
+          closeMenu();
+
+          menuButton.focus();
+
+        }
+
+      }
+    );
+
+  </script>
+
+</body>
+
+</html>
