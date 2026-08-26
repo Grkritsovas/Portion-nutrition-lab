@@ -1,2 +1,2 @@
 # nutritionlab
-Static website for nutritionlab Lamia
+Static website for Portion Nutrition Lab Lamia
