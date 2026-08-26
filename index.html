@@ -23,9 +23,6 @@
     content="index, follow"
   >
 
-
-  <!-- Open Graph -->
-
   <meta
     property="og:title"
     content="Portion Nutrition Lab | Πέτρος Σωτηρίου"
@@ -66,7 +63,7 @@
   >
 
 
-  <!-- Local SEO structured data -->
+  <!-- Local SEO -->
 
   <script type="application/ld+json">
   {
@@ -188,12 +185,21 @@
     .top-contact a {
       display: flex;
       align-items: center;
+
       gap: 8px;
 
       color: #FFFFFF;
 
       font-weight: 500;
       text-decoration: none;
+    }
+
+
+    .top-contact svg {
+      width: 17px;
+      height: 17px;
+
+      flex-shrink: 0;
     }
 
 
@@ -210,6 +216,7 @@
       position: relative;
 
       background: var(--bg);
+
       border-bottom: 1px solid var(--border);
 
       z-index: 50;
@@ -219,7 +226,7 @@
     .header-inner {
       position: relative;
 
-      min-height: 130px;
+      min-height: 145px;
 
       display: flex;
       align-items: center;
@@ -227,23 +234,26 @@
     }
 
 
-    /* Logo */
+    /* =========================
+       LOGO
+       ========================= */
 
     .logo {
-      display: block;
-      text-decoration: none;
+      width: 330px;
+      height: 135px;
+      overflow: hidden;
     }
 
-
     .logo img {
-      display: block;
+      width: 330px;
+      height: 150px;
 
-      width: auto;
+      object-fit: cover;
+      object-position: center;
 
-      max-width: min(320px, 65vw);
-      max-height: 105px;
+      transform: translateY(5px);
 
-      object-fit: contain;
+      mix-blend-mode: multiply;
     }
 
 
@@ -259,11 +269,12 @@
 
       transform: translateY(-50%);
 
-      width: 46px;
-      height: 46px;
+      width: 48px;
+      height: 48px;
 
       display: flex;
       flex-direction: column;
+
       align-items: center;
       justify-content: center;
 
@@ -319,7 +330,7 @@
       top: calc(100% - 8px);
       right: 24px;
 
-      min-width: 220px;
+      min-width: 230px;
 
       display: none;
       flex-direction: column;
@@ -422,6 +433,7 @@
       margin-bottom: 18px;
 
       font-size: clamp(2.1rem, 4.5vw, 3rem);
+
       line-height: 1.15;
     }
 
@@ -465,7 +477,7 @@
       display: grid;
 
       grid-template-columns:
-        repeat(auto-fit, minmax(250px, 1fr));
+        repeat(3, 1fr);
 
       gap: 24px;
     }
@@ -560,7 +572,8 @@
       border-radius: var(--radius);
 
       box-shadow:
-        0 18px 40px -25px rgba(41, 67, 56, 0.4);
+        0 18px 40px -25px
+        rgba(41, 67, 56, 0.4);
     }
 
 
@@ -595,7 +608,7 @@
 
 
     /* =========================
-       CONTACT CTA
+       CONTACT
        ========================= */
 
     .contact-section {
@@ -632,6 +645,7 @@
 
     .button {
       display: inline-flex;
+
       align-items: center;
       justify-content: center;
 
@@ -736,10 +750,45 @@
 
 
     /* =========================
+       TABLET
+       ========================= */
+
+    @media (max-width: 900px) {
+
+      /*
+        From tablet size downward:
+        no side-by-side specialty cards.
+      */
+
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+
+
+      /*
+        About section also becomes vertical:
+        photo first, text underneath.
+      */
+
+      .about-grid {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+      }
+
+
+      .about-photo {
+        max-width: 420px;
+      }
+
+    }
+
+
+    /* =========================
        MOBILE
        ========================= */
 
-    @media (max-width: 760px) {
+    @media (max-width: 640px) {
 
       .wrap {
         padding-left: 20px;
@@ -747,15 +796,17 @@
       }
 
 
+      /* Contact */
+
       .top-contact .wrap {
         min-height: auto;
 
-        padding-top: 9px;
-        padding-bottom: 9px;
+        padding-top: 10px;
+        padding-bottom: 10px;
 
         flex-direction: column;
 
-        gap: 3px;
+        gap: 5px;
       }
 
 
@@ -764,6 +815,8 @@
       }
 
 
+      /* Header */
+
       .header-inner {
         min-height: 110px;
 
@@ -771,9 +824,22 @@
       }
 
 
+      /*
+        Larger logo on mobile,
+        but leave room for hamburger.
+      */
+
+      .logo {
+        width: 225px;
+        height: 90px;
+
+        justify-content: flex-start;
+      }
+
+
       .logo img {
-        max-width: 210px;
-        max-height: 85px;
+        width: 245px;
+        height: 110px;
       }
 
 
@@ -781,6 +847,8 @@
         right: 20px;
       }
 
+
+      /* Menu */
 
       .main-nav {
         top: calc(100% - 5px);
@@ -791,6 +859,8 @@
         min-width: 0;
       }
 
+
+      /* Hero */
 
       .hero {
         padding: 48px 0 65px;
@@ -806,10 +876,31 @@
       }
 
 
+      .hero h1 {
+        font-size: 2.25rem;
+      }
+
+
+      /* Cards */
+
       .specialties {
         padding-bottom: 65px;
       }
 
+
+      .card-grid {
+        grid-template-columns: 1fr;
+
+        gap: 18px;
+      }
+
+
+      .card {
+        width: 100%;
+      }
+
+
+      /* About */
 
       .about {
         padding: 65px 0;
@@ -819,14 +910,17 @@
       .about-grid {
         grid-template-columns: 1fr;
 
-        gap: 35px;
+        gap: 30px;
       }
 
 
       .about-photo {
-        max-width: 360px;
+        width: 100%;
+        max-width: 100%;
       }
 
+
+      /* Contact */
 
       .contact-section {
         padding: 60px 0;
@@ -842,9 +936,17 @@
         width: 100%;
       }
 
+
+      /* Footer */
+
+      footer .wrap {
+        flex-direction: column;
+      }
+
     }
 
   </style>
+
 </head>
 
 
@@ -852,29 +954,67 @@
 
 
   <!-- =========================
-       TOP CONTACT BAR
+       TOP CONTACT
        ========================= -->
 
   <div class="top-contact">
 
     <div class="wrap">
 
+
       <a
         href="https://www.google.com/maps/search/?api=1&query=Portion+Nutrition+Lab%2C+Patroklou+35%2C+Lamia"
         target="_blank"
         rel="noopener noreferrer"
       >
-        <span aria-hidden="true">⌖</span>
+
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+
+          <path
+            d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"
+          ></path>
+
+          <circle
+            cx="12"
+            cy="10"
+            r="2.5"
+          ></circle>
+
+        </svg>
 
         Πατρόκλου 35, Λαμία
+
       </a>
 
 
       <a href="tel:+302231308028">
 
-        <span aria-hidden="true">☎</span>
+        <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+
+          <path
+            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.69 2.8a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.28-1.28a2 2 0 0 1 2.11-.45c.9.33 1.84.56 2.8.69A2 2 0 0 1 22 16.92Z"
+          ></path>
+
+        </svg>
 
         22313 08028
+
       </a>
 
     </div>
@@ -945,14 +1085,12 @@
   </header>
 
 
-  <!-- =========================
-       MAIN
-       ========================= -->
-
   <main id="top">
 
 
-    <!-- HERO -->
+    <!-- =========================
+         HERO
+         ========================= -->
 
     <section class="hero">
 
@@ -1112,7 +1250,7 @@
               >
 
                 <path
-                  d="M12 21s-7.5-4.6-10-9.2C0.3 8.4 2 4.5 6 4c2.2-0.3 4 1 6 3 2-2 3.8-3.3 6-3 4 0.5 5.7 4.4 4 7.8C19.5 16.4 12 21 12 21z"
+                  d="M12 21s-7.5-4.6-10-9.2C0.3 8.4 2 4.5 6 4c2.2-.3 4 1 6 3 2-2 3.8-3.3 6-3 4 .5 5.7 4.4 4 7.8C19.5 16.4 12 21 12 21z"
                 ></path>
 
               </svg>
@@ -1366,9 +1504,7 @@
 
 
     <div class="wrap footer-bottom">
-
       &copy; 2026 Portion Nutrition Lab · Λαμία
-
     </div>
 
   </footer>
