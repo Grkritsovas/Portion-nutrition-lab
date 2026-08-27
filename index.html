@@ -12,7 +12,7 @@
   >
 
   <title>
-    Portion Nutrition Lab | Διαιτολόγος - Διατροφολόγος Λαμία
+    Portion Nutrition Lab | Διαιτολόγος-Διατροφολόγος στη Λαμία
   </title>
 
   <meta
@@ -448,6 +448,41 @@
     }
 
 
+    .hero-actions {
+      margin-top: 28px;
+    }
+
+
+    .hero-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      min-height: 48px;
+      padding: 11px 20px;
+
+      color: #FFFFFF;
+      background: var(--accent);
+
+      border-radius: 10px;
+
+      font-weight: 700;
+      text-decoration: none;
+
+      box-shadow: 0 10px 24px -16px rgba(192, 138, 62, 0.8);
+
+      transition:
+        transform 0.2s ease,
+        background 0.2s ease;
+    }
+
+
+    .hero-button:hover {
+      transform: translateY(-2px);
+      background: #A87331;
+    }
+
+
     /* =========================
        SPECIALTIES
        ========================= */
@@ -484,36 +519,83 @@
     }
 
 
+    /* These cards are interactive: they open a details popup. */
     .card {
-      padding: 30px 26px;
+      position: relative;
+      overflow: hidden;
+
+      width: 100%;
+      padding: 32px 28px 28px;
+
+      text-align: left;
+      font: inherit;
+      color: inherit;
 
       background: var(--surface);
 
       border: 1px solid var(--border);
       border-radius: var(--radius);
 
+      cursor: pointer;
+
       transition:
         transform 0.2s ease,
-        box-shadow 0.2s ease;
+        box-shadow 0.2s ease,
+        border-color 0.2s ease;
+    }
+
+
+    .card::before {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 4px;
+
+      background: var(--primary);
+    }
+
+
+    .card:nth-child(even)::before {
+      background: var(--accent);
     }
 
 
     .card:hover {
-      transform: translateY(-3px);
+      transform: translateY(-4px);
+
+      border-color: #CDD6CE;
 
       box-shadow:
-        0 12px 28px -18px
-        rgba(41, 67, 56, 0.35);
+        0 16px 32px -20px
+        rgba(41, 67, 56, 0.38);
     }
 
 
     .card-icon {
-      width: 42px;
-      height: 42px;
+      width: 56px;
+      height: 56px;
 
-      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      margin-bottom: 20px;
+      padding: 13px;
 
       color: var(--primary);
+      background: #E5ECE7;
+
+      border-radius: 14px;
+    }
+
+
+    .card:nth-child(even) .card-icon {
+      color: var(--accent);
+      background: #F5EBDD;
     }
 
 
@@ -539,24 +621,31 @@
     }
 
 
-    .card {
-      width: 100%;
-      text-align: left;
-      font: inherit;
-      color: inherit;
-      cursor: pointer;
-    }
-
-
     .card-more {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
 
-      margin-top: 18px;
+      margin-top: 20px;
 
       color: var(--primary);
 
       font-size: 0.9rem;
-      font-weight: 600;
+      font-weight: 700;
+    }
+
+
+    .card-more::after {
+      content: "→";
+
+      font-size: 1rem;
+
+      transition: transform 0.2s ease;
+    }
+
+
+    .card:hover .card-more::after {
+      transform: translateX(4px);
     }
 
 
@@ -587,7 +676,12 @@
        ========================= */
 
     .approach {
-      padding: 80px 0 90px;
+      padding: 82px 0 90px;
+
+      background: var(--surface);
+
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
     }
 
 
@@ -602,17 +696,36 @@
       display: grid;
       grid-template-columns: repeat(3, 1fr);
 
-      gap: 24px;
+      gap: 34px;
+
+      counter-reset: approach-step;
     }
 
 
+    /* Static information, intentionally styled unlike the clickable service cards. */
     .approach-item {
-      padding: 28px 26px;
+      position: relative;
 
-      background: rgba(255, 255, 255, 0.55);
+      padding: 4px 0 4px 22px;
 
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
+      border-left: 3px solid var(--accent);
+
+      counter-increment: approach-step;
+    }
+
+
+    .approach-item::before {
+      content: "0" counter(approach-step);
+
+      display: block;
+
+      margin-bottom: 10px;
+
+      color: var(--accent);
+
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
     }
 
 
@@ -1469,6 +1582,12 @@
           διατροφής μετατρέπεται σε κατανοητές και πρακτικές εφαρμογές.
         </p>
 
+        <div class="hero-actions">
+          <a class="hero-button" href="#epikoinonia">
+            Επικοινωνήστε μαζί μου
+          </a>
+        </div>
+
       </div>
 
     </section>
@@ -1615,7 +1734,7 @@
               >
 
                 <path
-                  d="M12 21s-7.5-4.6-10-9.2C0.3 8.4 2 4.5 6 4c2.2-.3 4 1 6 3 2-2 3.8-3.3 6-3 4 .5 5.7 4.4 4 7.8C19.5 16.4 12 21 12 21z"
+                  d="M10 4h4v6h6v4h-6v6h-4v-6H4v-4h6z"
                 ></path>
 
               </svg>
