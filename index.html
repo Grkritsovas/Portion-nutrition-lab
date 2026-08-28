@@ -989,6 +989,109 @@
         rgba(41, 67, 56, 0.4);
     }
 
+    .about-photo-button {
+      display: block;
+
+      width: 100%;
+      padding: 0;
+
+      background: none;
+      border: 0;
+
+      border-radius: var(--radius);
+
+      cursor: zoom-in;
+    }
+
+
+    .about-photo-button img {
+      transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+    }
+
+
+    .about-photo-button:hover img {
+      transform: scale(1.015);
+
+      box-shadow:
+        0 20px 45px -22px
+        rgba(41, 67, 56, 0.5);
+    }
+
+
+    /* =========================
+      PHOTO DIALOG
+      ========================= */
+
+    .photo-dialog {
+      width: min(1000px, calc(100% - 40px));
+      max-height: calc(100dvh - 40px);
+
+      padding: 0;
+
+      overflow: visible;
+
+      background: transparent;
+
+      border: 0;
+    }
+
+
+    .photo-dialog::backdrop {
+      background: rgba(20, 28, 24, 0.82);
+    }
+
+
+    .photo-dialog-inner {
+      position: relative;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+    .photo-dialog img {
+      display: block;
+
+      max-width: 100%;
+      max-height: calc(100dvh - 40px);
+
+      width: auto;
+      height: auto;
+
+      border-radius: var(--radius);
+    }
+
+
+    .photo-dialog-close {
+      position: absolute;
+
+      top: 12px;
+      right: 12px;
+
+      width: 42px;
+      height: 42px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background: rgba(255, 255, 255, 0.94);
+      color: var(--primary-dark);
+
+      border: 0;
+      border-radius: 50%;
+
+      font-size: 1.5rem;
+      line-height: 1;
+
+      cursor: pointer;
+
+      box-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
+    }
+
 
     .about-text h2 {
       margin-bottom: 6px;
@@ -2037,16 +2140,23 @@
 
       <div class="wrap about-grid">
 
-
         <div class="about-photo">
 
-          <img
-            src="image/petros.jpg"
-            alt="Πέτρος Σωτηρίου, Διαιτολόγος-Διατροφολόγος"
-            loading="lazy"
+          <button
+            class="about-photo-button"
+            type="button"
+            aria-label="Μεγέθυνση φωτογραφίας"
           >
 
-        </div>
+            <img
+              src="image/petros.jpg"
+              alt="Πέτρος Σωτηρίου, Διαιτολόγος-Διατροφολόγος"
+              loading="lazy"
+            >
+
+          </button>
+
+      </div>
 
 
         <div class="about-text">
@@ -2242,6 +2352,32 @@
     </section>
 
   </main>
+
+  /* Photo click */
+    <dialog
+      class="photo-dialog"
+      id="photo-dialog"
+      aria-label="Φωτογραφία Πέτρου Σωτηρίου"
+    >
+
+      <div class="photo-dialog-inner">
+
+        <button
+          class="photo-dialog-close"
+          type="button"
+          aria-label="Κλείσιμο φωτογραφίας"
+        >
+          &times;
+        </button>
+
+        <img
+          src="image/petros.jpg"
+          alt="Πέτρος Σωτηρίου"
+        >
+
+      </div>
+
+    </dialog>
 
 
   <!-- =========================
@@ -2541,6 +2677,61 @@
         if (event.target === specialtyDialog) {
           specialtyDialog.close();
         }
+
+      }
+    );
+
+    const aboutPhotoButton =
+      document.querySelector('.about-photo-button');
+
+    const photoDialog =
+      document.querySelector('#photo-dialog');
+
+    const photoDialogClose =
+      document.querySelector('.photo-dialog-close');
+
+
+    aboutPhotoButton.addEventListener(
+      'click',
+      () => {
+
+        document.body.classList.add('dialog-open');
+
+        photoDialog.showModal();
+
+      }
+    );
+
+
+    photoDialogClose.addEventListener(
+      'click',
+      () => {
+
+        photoDialog.close();
+
+      }
+    );
+
+
+    photoDialog.addEventListener(
+      'click',
+      event => {
+
+        if (event.target === photoDialog) {
+
+          photoDialog.close();
+
+        }
+
+      }
+    );
+
+
+    photoDialog.addEventListener(
+      'close',
+      () => {
+
+        document.body.classList.remove('dialog-open');
 
       }
     );
