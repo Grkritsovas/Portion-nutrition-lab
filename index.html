@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
 
   <link rel="icon" type="image/png" href="image/favicon.png">
+  <link rel="apple-touch-icon" href="image/favicon.png">
 
   <meta
     name="viewport"
@@ -22,17 +23,24 @@
 
   <meta
     name="robots"
-    content="index, follow"
+    content="index, follow, max-image-preview:large"
+  >
+
+  <meta name="theme-color" content="#294338">
+
+  <link
+    rel="canonical"
+    href="https://portionlab.gr/"
   >
 
   <meta
     property="og:title"
-    content="Portion Nutrition Lab | Πέτρος Σωτηρίου"
+    content="Portion Nutrition Lab | Διαιτολόγος-Διατροφολόγος στη Λαμία"
   >
 
   <meta
     property="og:description"
-    content="Επιστημονικά τεκμηριωμένη διατροφική υποστήριξη στη Λαμία."
+    content="Εξατομικευμένη, επιστημονικά τεκμηριωμένη διατροφική υποστήριξη στη Λαμία από τον Πέτρο Σωτηρίου."
   >
 
   <meta
@@ -41,8 +49,48 @@
   >
 
   <meta
+    property="og:url"
+    content="https://portionlab.gr/"
+  >
+
+  <meta
+    property="og:site_name"
+    content="Portion Nutrition Lab"
+  >
+
+  <meta
+    property="og:image"
+    content="https://portionlab.gr/image/petros.jpg"
+  >
+
+  <meta
+    property="og:image:alt"
+    content="Πέτρος Σωτηρίου - Portion Nutrition Lab"
+  >
+
+  <meta
     property="og:locale"
     content="el_GR"
+  >
+
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
+
+  <meta
+    name="twitter:title"
+    content="Portion Nutrition Lab | Διαιτολόγος-Διατροφολόγος στη Λαμία"
+  >
+
+  <meta
+    name="twitter:description"
+    content="Εξατομικευμένη, επιστημονικά τεκμηριωμένη διατροφική υποστήριξη στη Λαμία."
+  >
+
+  <meta
+    name="twitter:image"
+    content="https://portionlab.gr/image/petros.jpg"
   >
 
 
@@ -71,11 +119,16 @@
   {
     "@context": "https://schema.org",
     "@type": "MedicalBusiness",
+    "@id": "https://portionlab.gr/#business",
     "name": "Portion Nutrition Lab",
+    "url": "https://portionlab.gr/",
+    "logo": "https://portionlab.gr/image/logo.png",
+    "image": "https://portionlab.gr/image/petros.jpg",
     "telephone": "+302231308028",
     "email": "portionnutrilab@yahoo.com",
     "sameAs": [
-      "https://portionnutritionlab.blogspot.com/p/about-us.html"
+      "https://portionnutritionlab.blogspot.com/",
+      "https://share.google/RIczKIQ7Q5ovgxzUN"
     ],
     "medicalSpecialty": "https://schema.org/DietNutrition",
     "address": {
@@ -83,6 +136,7 @@
       "streetAddress": "Πατρόκλου 35",
       "addressLocality": "Λαμία",
       "addressRegion": "Φθιώτιδα",
+      "postalCode": "35100",
       "addressCountry": "GR"
     },
     "founder": {
@@ -90,7 +144,10 @@
       "name": "Πέτρος Σωτηρίου",
       "jobTitle": "Διαιτολόγος-Διατροφολόγος"
     },
-    "areaServed": "Λαμία"
+    "areaServed": {
+      "@type": "City",
+      "name": "Λαμία"
+    }
   }
   </script>
 
@@ -2353,31 +2410,35 @@
 
   </main>
 
-  /* Photo click */
-    <dialog
-      class="photo-dialog"
-      id="photo-dialog"
-      aria-label="Φωτογραφία Πέτρου Σωτηρίου"
-    >
 
-      <div class="photo-dialog-inner">
+  <!-- =========================
+       PROFILE PHOTO POPUP
+       ========================= -->
 
-        <button
-          class="photo-dialog-close"
-          type="button"
-          aria-label="Κλείσιμο φωτογραφίας"
-        >
-          &times;
-        </button>
+  <dialog
+    class="photo-dialog"
+    id="photo-dialog"
+    aria-label="Φωτογραφία Πέτρου Σωτηρίου"
+  >
 
-        <img
-          src="image/petros.jpg"
-          alt="Πέτρος Σωτηρίου"
-        >
+    <div class="photo-dialog-inner">
 
-      </div>
+      <button
+        class="photo-dialog-close"
+        type="button"
+        aria-label="Κλείσιμο φωτογραφίας"
+      >
+        &times;
+      </button>
 
-    </dialog>
+      <img
+        src="image/petros.jpg"
+        alt="Πέτρος Σωτηρίου"
+      >
+
+    </div>
+
+  </dialog>
 
 
   <!-- =========================
@@ -2571,7 +2632,6 @@
 
       }
     );
-
 
     /* =========================
        SPECIALTY POPUPS
