@@ -872,8 +872,12 @@
 
     .specialty-dialog {
       width: min(620px, calc(100% - 40px));
+      max-height: calc(100dvh - 40px);
 
       padding: 0;
+
+      overflow-y: auto;
+      overscroll-behavior: contain;
 
       background: var(--surface);
 
@@ -888,6 +892,9 @@
       background: rgba(24, 35, 30, 0.48);
     }
 
+    body.dialog-open {
+      overflow: hidden;
+    }
 
     .dialog-inner {
       position: relative;
@@ -2505,6 +2512,8 @@
               .map(paragraph => `<p>${paragraph}</p>`)
               .join('');
 
+          document.body.classList.add('dialog-open');
+
           specialtyDialog.showModal();
 
         });
@@ -2515,6 +2524,13 @@
     dialogClose.addEventListener(
       'click',
       () => specialtyDialog.close()
+    );
+
+    specialtyDialog.addEventListener(
+      'close',
+      () => {
+        document.body.classList.remove('dialog-open');
+      }
     );
 
 
