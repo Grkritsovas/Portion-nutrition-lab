@@ -718,6 +718,18 @@ header {
   font-weight: 600;
 }
 
+.testimonial-card cite a {
+  color: inherit;
+  text-decoration: none;
+
+  transition: color 0.2s ease;
+}
+
+.testimonial-card cite a:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
 
 .reviews-link {
   margin-top: 30px;
